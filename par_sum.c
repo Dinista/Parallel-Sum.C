@@ -55,7 +55,8 @@ void help(){
                     "	-t: Numero de threads.\n"
 					"	-h: Mostra Menu Ajuda.\n"
 					"\nRequisitos:\n"
-                    "	1. -f e -t sao argumentos obrigatorios.\n");
+                    "	1. -f e -t sao argumentos obrigatorios.\n"
+					"	2. O arquivo de teste deve estar na pasta raiz do programa.\n");
 }
 
 /* Adiciona a lista */
@@ -207,6 +208,8 @@ int main(int argc, char **argv){
 		}
 	}
 
+	pthread_attr_destroy(&attr);
+
 	/* Lendo Arquivo */
 	
 	FILE* fin = fopen(fn, "r");
@@ -250,6 +253,7 @@ int main(int argc, char **argv){
 	
 	/* limpando memoria e retornando */
 	fclose(fin);
+	pthread_mutex_destroy(&mutex);
 	pthread_mutex_destroy(&mutex_list);
 	pthread_cond_destroy(&cond_list);
 	
