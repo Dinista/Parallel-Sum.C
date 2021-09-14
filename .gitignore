@@ -4,7 +4,7 @@
 !Makefile
 .DS_Store
 *.dSYM
-Comentario.c
-Alterado.c
-Exemplo.c
+*.c
+!sum.c
+!par_sum.c
 !test*
