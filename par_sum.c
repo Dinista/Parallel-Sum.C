@@ -6,6 +6,7 @@
 #include<pthread.h>
 #include<string.h>
 #include<errno.h>
+#include<getopt.h>
 
 #define handle_error_en(en, msg)				\
   do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)
@@ -161,7 +162,7 @@ void* worker_function(){
 int main(int argc, char **argv){
 	int num_of_threads = - 1;
 	int opt;
-	char *fn, action;
+	char *fn = NULL, action;
 	long num;
 	
 	/* Menu de opcoes */
