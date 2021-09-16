@@ -89,6 +89,7 @@ int remove_from_list(){
 	}
 
 	int val = aux->value;
+	free(aux);
 	return val;
 }
 
