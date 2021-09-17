@@ -1,0 +1,4 @@
+Para compilar use make
+Para executar cada teste é necessário:
+que o arquivo de teste esteja no mesmo diretório que o executável
+passar a linha de comomando como: ./par_sum [-f <Nome_do_Arquivo>] [-t <Numero_threads>]
