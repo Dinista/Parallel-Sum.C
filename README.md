@@ -39,3 +39,20 @@ The final output should match the following (sum, # odd, min, max):
 ## How to use
 
 The <i>file.txt</i> must be in the same folder as the program.
+
+Compile with make
+
+```console
+make
+```
+Run:
+
+```console
+./par_sum [-f <File name>] [-t <Number of threads>]
+```
+
+Example
+
+```console
+./par_sum -f test1 -t 4
+```
